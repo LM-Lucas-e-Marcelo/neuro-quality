@@ -1,0 +1,108 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Brand (logo magenta + deep blue) */
+    --primary: 318 67% 45%; /* magenta */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 219 80% 96%; /* soft blue surface */
+    --secondary-foreground: 219 60% 22%;
+
+    --muted: 220 16% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 219 78% 40%; /* deep blue */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 90%;
+    --input: 220 20% 90%;
+    --ring: var(--primary);
+
+    --radius: 0.75rem;
+
+    /* Sidebar tokens aligned with brand */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 219 80% 96%;
+    --sidebar-accent-foreground: 219 60% 22%;
+    --sidebar-border: 220 20% 90%;
+    --sidebar-ring: var(--primary);
+  }
+
+  .dark {
+    --background: 222 50% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 50% 7%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 50% 7%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 318 67% 55%;
+    --primary-foreground: 222 50% 6%;
+
+    --secondary: 220 24% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 219 78% 50%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62% 36%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 22%;
+    --input: 220 15% 22%;
+    --ring: 318 67% 55%;
+
+    --sidebar-background: 222 50% 6%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 318 67% 55%;
+    --sidebar-primary-foreground: 222 50% 6%;
+    --sidebar-accent: 220 24% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 15% 22%;
+    --sidebar-ring: 318 67% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
