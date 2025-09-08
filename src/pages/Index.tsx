@@ -5,7 +5,8 @@ import {
   KPISection, 
   ExamsSection, 
   TrustSection, 
-  CTASection 
+  CTASection, 
+  SpecialtiesSection
 } from "@/components/sections";
 import { Testimonials } from "@/components/testimonials";
 
@@ -16,6 +17,7 @@ export default function Index() {
       <KPISection />
       <ExamsSection />
       <TrustSection />
+      <SpecialtiesSection />
       <About />
       <Testimonials />
       <Contact />
